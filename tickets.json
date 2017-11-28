@@ -1,0 +1,55 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "description": "Distributed Ticketmaster/Eventbrite",
+  "type": "object",
+  "required": ["name","category","description","price"],
+  "properties": {
+    "name": {
+      "type": "string", 
+      "title": "Title",
+       "minLength": "3"
+    },
+    "category": {
+      "type": "string", 
+      "title": "Category", 
+      "enum": [
+        "Arts",
+        "Classes & Workshops",
+        "Conference",
+        "Fundraisers",
+        "Music",
+        "Non-profit event",
+        "Other",
+        "Sports",
+        "Theater",
+        "Tradeshow"
+      ]
+    },
+    "datetime": {
+        "type": "string",
+        "format": "date-time",
+        "title": "When"
+    },
+    "location": {
+      "type": "string", 
+      "title": "Where"
+    },
+    "description": {
+      "type": "string", 
+      "title": "Description", 
+      "minLength": "10"
+    },
+    "pictures": {
+      "type": "array",
+      "title": "Pictures",
+      "items": {
+        "type": "string",
+        "format": "data-url"
+      }
+    },
+    "price": {
+      "type": "number", 
+      "title": "Price in 0rigin token"
+    }
+  }
+}
