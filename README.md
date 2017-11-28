@@ -1,4 +1,4 @@
-# listing-schemas
+# Listing Schemas
 
 We're using [JSONSchema](http://json-schema.org/) as the base data structure for Origin listings. 
 
